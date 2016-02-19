@@ -1,0 +1,15 @@
+<h1>Welcome to the Car Simulator</h1>
+<!-- <p>Find me in app/views/car/new_car.html.erb</p> -->
+<hr/>
+
+<form id = "welcome_form">
+  <label for "make_id">Make: </label>
+  <input class = "user_inputs" type = "text" id = "make_id" name = "make" required/>
+  <label for "year_id">Year: </label>
+  <input class = "user_inputs" type = "number" id = "year_id" name = "year" min = "1800" max = "2017" required/>
+  <label for "color_id">Car Color: </label>
+  <input class = "user_inputs" type = "color" id = "color_id" name = "color"/>
+  <label for "description_id">Car Description: </label>
+  <input class = "user_inputs" type = "text area" id = "description_id" name = "description" maxlength = "100"/><br><br>
+  <input type = "submit" value = "Simulate My Car"/>
+</form>
