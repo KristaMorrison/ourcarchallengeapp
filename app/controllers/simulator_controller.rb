@@ -5,7 +5,7 @@ class SimulatorController < ApplicationController
     @year = @car_object.year
     @color = cookies[:color]
   end
-
+  #
   def lights
     #pull the car object out of the session
     @car_object = YAML.load(session[:car])
@@ -28,7 +28,7 @@ class SimulatorController < ApplicationController
     session[:car] = @car_object.to_yaml
     redirect_to "/simulator/do"
   end
-
+  #
   def brake
     #pull the car object out of the session
     @car_object = YAML.load(session[:car])

@@ -6,7 +6,7 @@ class CarController < ApplicationController
       #if no user input, continue to render the page
       render "new_car"
     else
-      #once the user adds input for both make and model year, create a new car object with those parameters
+     #once the user adds input for both make and model year, create a new car object with those parameters
       car = Car.new(params[:make], params[:year])
       #store the new car object as a string in a session, to be used by other controllers
       session[:car] = car.to_yaml
