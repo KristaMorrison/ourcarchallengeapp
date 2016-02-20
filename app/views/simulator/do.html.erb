@@ -1,6 +1,6 @@
 <h1>Your Car</h1>
-<p class="carTitles">Make: <%= @make %></p>
-<p class="carTitles">Year: <%= @year %></p>
+<p class="carTitles" style = "color: <%= @color %>">Make: <%= @make %></p>
+<p class="carTitles" style = "color: <%= @color %>">Year: <%= @year %></p>
 <% if cookies.has_key?(:description) %>
   <p class="carTitles">Car Description: <%= cookies[:description] %></p>
 <% end %><br>

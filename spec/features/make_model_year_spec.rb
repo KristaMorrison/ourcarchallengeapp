@@ -22,6 +22,7 @@ RSpec.feature "MakeModelYears", type: :feature do
       click_button "Simulate My Car"
       expect(current_path).to eq("/simulator/do")
     end
+    #now that we know that the button redirects correctly, we test that the page has updated with the correct content
     it "after clicking simulate my car button, I am taken to a status page showing make and model year of the car" do
       auto_fill_welcome_form
       click_button "Simulate My Car"
@@ -38,11 +39,14 @@ RSpec.feature "MakeModelYears", type: :feature do
     it "I can turn the lights on using a button that toggles between show On and Off" do
       auto_fill_welcome_form
       click_button "Simulate My Car"
+      #testing to turn the lights on
       within("form#lights_form") do
         choose "On"
         click_button "Light Switch"
       end
+      #testing that the status has been updated
       expect(page).to have_content("Headlights are: On")
+      #testing to turn the lights off, having been turned on
       within("form#lights_form") do
         choose "Off"
         click_button "Light Switch"
@@ -79,11 +83,14 @@ RSpec.feature "MakeModelYears", type: :feature do
     it "I can set and release the parking brake using radio buttons" do
       auto_fill_welcome_form
       click_button "Simulate My Car"
+      #testing to turn the brake lever on
       within("form#parking_brake_form") do
         choose "On"
         click_button "Brake Lever"
       end
+      #testing that the parking brake's status has been updated
       expect(page).to have_content("Parking Brake is: On")
+      #testing to turn the brake lever off, having been turned on
       within("form#parking_brake_form") do
         choose "Off"
         click_button "Brake Lever"
@@ -118,12 +125,13 @@ RSpec.feature "MakeModelYears", type: :feature do
     # Story: As an internet user, I can select a color on the welcome page and have it used as the color for the model and year on the status page.
     it "I can select a color on the welcome page and have it used as the color for the model and year on the status page" do
       visit '/car/new_car'
+      #we are checking for the color field, however, capybara does not have the capability of testing the color selection from a field of input type color
       within("form#welcome_form") do
         expect(page).to have_field("color")
       end
     end
   end
-
+  #helper method to fill in the welcome form
   def auto_fill_welcome_form
     visit '/car/new_car'
     within("form#welcome_form") do
