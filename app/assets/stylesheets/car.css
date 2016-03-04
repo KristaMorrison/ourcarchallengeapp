@@ -6,3 +6,7 @@
 #welcome_form {
   display: inline;
 }
+
+h1, h2, p, label, input, value {
+  font-family: 'Montserrat', sans-serif !important;
+}

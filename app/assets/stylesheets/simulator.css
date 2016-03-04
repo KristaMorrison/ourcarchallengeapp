@@ -5,7 +5,7 @@
 body {
   text-align: center;
   font-size: 20pt;
-  font-family: fantasy;
+  font-family: 'Montserrat', sans-serif !important;
   background-repeat: no-repeat;
   background-image: url(http://www.openroaddrivingsuccess.uk/wpimages/wp2eaa2716_05_06.jpg);
   background-size: cover;
@@ -25,12 +25,12 @@ p {
 }
 
 h1 {
-  font-family: fantasy;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 input {
   font-size: 20pt;
-  font-family: fantasy;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 #brake_id {
