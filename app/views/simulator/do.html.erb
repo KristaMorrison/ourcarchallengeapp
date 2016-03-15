@@ -9,28 +9,37 @@
 <p class = "carStats" >Parking Brake is: <%= @car_object.brakeOn? ? "On" : "Off" %></p>
 <hr>
 
-<form id = "lights_form" action= "/simulator/lights" method="get">
-  <label for "lights_panel">Lights:</label>
-  <div id="lights_panel">
-    <input type = "radio" name = "lights" value = "Off" id = "Off">Off</input><br/>
-    <input type = "radio" name = "lights" value = "On" id = "On">On</input><br/>
-    <input type = "submit" value = "Light Switch"/>
+<div class="carPanel">
+  <div class="carFunctions">
+    <form id = "lights_form" action= "/simulator/lights" method="get">
+      <label for "lights_panel">Lights:</label>
+      <div id="lights_panel">
+        <input type = "radio" name = "lights" value = "Off" id = "Off">Off</input><br/>
+        <input type = "radio" name = "lights" value = "On" id = "On">On</input><br/>
+        <input type = "submit" value = "Light Switch"/>
+      </div>
+    </form><br/>
   </div>
-</form><br/>
 
-<form id = "brake_id" action="/simulator/brake" method="get">
-  <input type="submit" value = "Brake Pedal"/>
-</form>
+  <div class="carFunctions">
+    <form id = "brake_id" action="/simulator/brake" method="get">
+      <input type="submit" value = "Brake Pedal"/>
+    </form>
 
-<form id = "gas_id" action="/simulator/accelerate" method="get">
-  <input type="submit" value = "Gas Pedal"/>
-</form><br/><br/>
-
-<form id = "parking_brake_form" action= "/simulator/parking_brake" method="get">
-  <label for "parking_brake">Parking Brake:</label>
-  <div id="parking_brake">
-    <input type = "radio" name = "parking_brake" value = "Off" id = "Off">Release</input><br/>
-    <input type = "radio" name = "parking_brake" value = "On" id = "On">Set</input><br/>
-    <input type = "submit" value = "Brake Lever"/>
+    <form id = "gas_id" action="/simulator/accelerate" method="get">
+      <input type="submit" value = "Gas Pedal"/>
+    </form><br/><br/>
   </div>
-</form>
+
+  <div class="carFunctions">
+    <form id = "parking_brake_form" action= "/simulator/parking_brake" method="get">
+      <label for "parking_brake">Parking Brake:</label>
+      <div id="parking_brake">
+        <input type = "radio" name = "parking_brake" value = "Off" id = "Off">Release</input><br/>
+        <input type = "radio" name = "parking_brake" value = "On" id = "On">Set</input><br/>
+        <input type = "submit" value = "Brake Lever"/>
+      </div>
+    </form>
+  </div>
+
+</div>

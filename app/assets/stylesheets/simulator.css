@@ -5,7 +5,7 @@
 body {
   text-align: center;
   font-size: 20pt;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Raleway', sans-serif;
   background-repeat: no-repeat;
   background-image: url(http://www.openroaddrivingsuccess.uk/wpimages/wp2eaa2716_05_06.jpg);
   background-size: cover;
@@ -16,12 +16,18 @@ p {
   display:inline-block;
 }
 
-.carTitles {
+.carPanel {
+
+  display: inline-block;
+}
+
+.carTitles, .carStats {
     width: 500px;
 }
 
-.carStats {
+.carFunctions {
   width: 500px;
+  float: left;
 }
 
 h1 {
@@ -30,13 +36,9 @@ h1 {
 
 input {
   font-size: 20pt;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Raleway', sans-serif;
 }
 
-#brake_id {
-  display: inline;
-}
-
-#gas_id {
+#brake_id, #gas_id {
   display: inline;
 }
