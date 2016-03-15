@@ -1,28 +1,6 @@
-== README
+This was my first simple rails app, completed as part of my education at LEARN Academy. It was a pair programming project with Jon Richardson.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The challenge was to create a car simulator, where the user could input the information for their car, and that info would then be displayed on the next page.  The car make and year would be displayed in the color selected by the user, and the dash elements would default with lights off, speed at 0mph, and parking brake off. This page would also have a panel of functional elements including:
+- A light switch to turn on and off the car's lights
+- A gas pedal and brake which would affect the car's speed
+- A parking brake which, when set, would not allow the user to accelerate.  We chose to add the feature that the parking brake could not be set while the car was in motion.
