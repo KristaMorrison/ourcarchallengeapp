@@ -1,3 +1,5 @@
+ourcarchallengeapp - Car Simulator
+
 This was my first simple rails app, completed as part of my education at LEARN Academy. It was a pair programming project with Jon Richardson.
 
 The challenge was to create a car simulator, where the user could input the information for their car, and that info would then be displayed on the next page.  The car make and year would be displayed in the color selected by the user, and the dash elements would default with lights off, speed at 0mph, and parking brake off. This page would also have a panel of functional elements including:
